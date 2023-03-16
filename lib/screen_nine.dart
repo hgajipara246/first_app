@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class ScreenNine extends StatefulWidget {
@@ -573,41 +575,43 @@ class _ScreenNineState extends State<ScreenNine> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          "assets/icons/shopping_cart.png",
-                          height: 24,
-                          width: 24,
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        RichText(
-                          text: const TextSpan(
-                            text: "Minimarket",
-                            style: TextStyle(
-                              fontFamily: "ProximaNova",
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                              color: Color(0xFF1A1E25),
-                            ),
-                            children: [
-                              TextSpan(
-                                text: "\n200m",
-                                style: TextStyle(
-                                  fontFamily: "ProximaNova",
-                                  height: 1.5,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 16,
-                                  color: Color(0xFF7D7F88),
-                                ),
-                              ),
-                            ],
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            "assets/icons/shopping_cart.png",
+                            height: 24,
+                            width: 24,
                           ),
-                        ),
-                      ],
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          RichText(
+                            text: const TextSpan(
+                              text: "Minimarket",
+                              style: TextStyle(
+                                fontFamily: "ProximaNova",
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Color(0xFF1A1E25),
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: "\n200m",
+                                  style: TextStyle(
+                                    fontFamily: "ProximaNova",
+                                    height: 1.5,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                    color: Color(0xFF7D7F88),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -654,41 +658,43 @@ class _ScreenNineState extends State<ScreenNine> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          "assets/icons/spoon.png",
-                          height: 24,
-                          width: 24,
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        RichText(
-                          text: const TextSpan(
-                            text: "Public canteen",
-                            style: TextStyle(
-                              fontFamily: "ProximaNova",
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                              color: Color(0xFF1A1E25),
-                            ),
-                            children: [
-                              TextSpan(
-                                text: "\n400m",
-                                style: TextStyle(
-                                  fontFamily: "ProximaNova",
-                                  height: 1.5,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 16,
-                                  color: Color(0xFF7D7F88),
-                                ),
-                              ),
-                            ],
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            "assets/icons/spoon.png",
+                            height: 24,
+                            width: 24,
                           ),
-                        ),
-                      ],
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          RichText(
+                            text: const TextSpan(
+                              text: "Public canteen",
+                              style: TextStyle(
+                                fontFamily: "ProximaNova",
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Color(0xFF1A1E25),
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: "\n400m",
+                                  style: TextStyle(
+                                    fontFamily: "ProximaNova",
+                                    height: 1.5,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                    color: Color(0xFF7D7F88),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -856,14 +862,25 @@ class _ScreenNineState extends State<ScreenNine> {
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
-                          gradient: const LinearGradient(
-                            colors: [
-                              Color(0x34917AFD),
-                              Color(0x346246EA),
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            stops: [0.5, 1],
+                          // gradient: const LinearGradient(
+                          //   colors: [
+                          //     Color(0x34917AFD),
+                          //     Color(0x346246EA),
+                          //   ],
+                          //   begin: Alignment.topLeft,
+                          //   end: Alignment.bottomRight,
+                          //   stops: [0.5, 1],
+                          // ),
+                        ),
+                        child: ImageFiltered(
+                          imageFilter: ImageFilter.blur(sigmaX: 20, sigmaY: 7),
+                          child: Align(
+                            alignment: Alignment.bottomRight,
+                            child: Image.asset(
+                              width: 15,
+                              height: 15,
+                              "assets/icons/gradient.png",
+                            ),
                           ),
                         ),
                       ),
