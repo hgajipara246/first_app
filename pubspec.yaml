@@ -178,6 +178,20 @@ flutter:
         - asset: assets/fonts/ProximaNova-Extrabold.otf
         - asset: assets/fonts/ProximaNova-Regular.otf
 
+    - family: SofiaSans
+      fonts:
+        - asset: assets/fonts/SofiaSans-Black.ttf
+        - asset: assets/fonts/SofiaSans-Bold.ttf
+        - asset: assets/fonts/SofiaSans-ExtraBold.ttf
+        - asset: assets/fonts/SofiaSans-ExtraLight.ttf
+        - asset: assets/fonts/SofiaSans-Light.ttf
+        - asset: assets/fonts/SofiaSans-Medium.ttf
+        - asset: assets/fonts/SofiaSans-SemiBold.ttf
+        - asset: assets/fonts/SofiaSans-Thin.ttf
+
+    - family: FuturaStd
+      fonts:
+        - asset: assets/fonts/Futura Std Extra Bold.otf
 
   #   - family: Trajan Pro
   #     fonts:
